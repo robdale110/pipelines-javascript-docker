@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: robdalepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: robdalepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: robdalepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: robdalepipelinesjavascriptdocker 
+          image: rdcontreg33425.azurecr.io/robdalepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
